@@ -1,0 +1,74 @@
+# =============================================================================
+# .gitignore — sentiment-telecom-maroc
+# =============================================================================
+
+# --- Secrets / identifiants (JAMAIS versionner) ---------------------------
+# Les scripts de scraping lisent FB_EMAIL, FB_PASSWORD, FB_ACCESS_TOKEN
+# depuis des variables d'environnement — s'ils finissent un jour dans un
+# fichier .env local, ce fichier ne doit jamais partir sur Git.
+.env
+.env.*
+*.env
+secrets.json
+credentials.json
+
+# --- Données -----------------------------------------------------------
+# data/raw/ contient les exports bruts (Google Play, Apify) : volumineux,
+# régénérables via les scripts de scraping, et pas destinés à être versionnés.
+data/raw/
+
+# Décommente les lignes suivantes si tu veux aussi exclure les données
+# intermédiaires et finales du dépôt Git (recommandé si le corpus grossit
+# beaucoup — garde alors seulement un petit échantillon versionné à part) :
+# data/interim/
+# data/processed/
+# data/annotated/
+
+# --- Modèles entraînés (volumineux) -------------------------------------
+models/**/*.bin
+models/**/*.pt
+models/**/*.safetensors
+models/**/*.onnx
+models/**/checkpoint-*/
+
+# Cache local des modèles téléchargés depuis Hugging Face
+.cache/
+huggingface_cache/
+
+# --- Environnements virtuels Python -------------------------------------
+venv/
+.venv/
+env/
+ENV/
+
+# --- Python (cache, bytecode, build) -------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+build/
+dist/
+
+# --- Jupyter Notebooks ---------------------------------------------------
+.ipynb_checkpoints/
+
+# --- Streamlit -------------------------------------------------------------
+.streamlit/secrets.toml
+
+# --- Logs et fichiers temporaires ------------------------------------------
+*.log
+*.tmp
+*.bak
+
+# --- Éditeurs / IDE ---------------------------------------------------------
+.vscode/
+.idea/
+*.swp
+
+# --- Système d'exploitation --------------------------------------------
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- Rapports générés (facultatif, décommente si tu ne veux pas les versionner) --
+# reports/figures/*.png

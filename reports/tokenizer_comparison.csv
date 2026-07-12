@@ -1,0 +1,15 @@
+﻿language_category,tokenizer,n_samples,avg_subtokens_per_word
+arabic,DarijaBERT-mix,30,1.3596508738175406
+arabic,XLM-RoBERTa,30,1.7701354818021484
+other_latin,DarijaBERT-mix,30,1.4055555555555557
+other_latin,XLM-RoBERTa,30,1.2777777777777777
+french,DarijaBERT-mix,30,1.5342481858240373
+french,XLM-RoBERTa,30,1.3118736820264167
+symbols_only,DarijaBERT-mix,30,1.7333333333333334
+symbols_only,XLM-RoBERTa,30,3.7666666666666666
+mixed_latin_fr_darija,DarijaBERT-mix,30,1.5965463323518572
+mixed_latin_fr_darija,XLM-RoBERTa,30,1.5135754669077046
+darija_latin,DarijaBERT-mix,30,1.1859126984126986
+darija_latin,XLM-RoBERTa,30,1.8803174603174602
+mixed_arabic_latin,DarijaBERT-mix,30,1.5663814262201363
+mixed_arabic_latin,XLM-RoBERTa,30,2.15801505543441
